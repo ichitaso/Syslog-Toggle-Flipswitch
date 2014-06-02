@@ -1,0 +1,5 @@
+#!/bin/sh
+
+/Library/Switches/SyslogToggle.bundle/syslogsw
+
+exit 0

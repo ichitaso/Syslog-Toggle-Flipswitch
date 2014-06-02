@@ -1,0 +1,12 @@
+Package: com.ichitaso.syslogflipswitch
+Name: Syslog Toggle(Flipswitch)
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, syslogd
+Version: 0.1
+Architecture: iphoneos-arm
+Description: Syslog toggle for Flipswitch.
+Maintainer: ichitaso
+Author: ichitaso
+Section: Addons (Flipswitch)
+tag: role::hacker
+Homepage: http://ichitaso.com
+Depiction: http://ichitaso.com/apt/depiction/syslogfs.html
