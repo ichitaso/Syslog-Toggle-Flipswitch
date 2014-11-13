@@ -32,8 +32,7 @@ static BOOL syslogEnabled;
 
 - (void)applyState:(FSSwitchState)newState forSwitchIdentifier:(NSString *)switchIdentifier
 {
-	if (newState == FSSwitchStateIndeterminate)
-		return;
+	if (newState == FSSwitchStateIndeterminate) return;
     
     syslogEnabled = newState;
     
@@ -62,7 +61,8 @@ static BOOL syslogEnabled;
 
 -(void)alertView:(UIAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == 0) {//Dismiss
+    if (buttonIndex == 0) {
+        //Dismiss
     } else if (buttonIndex == 1) {
         system("touch /var/mobile/Library/Caches/syslogclear");
         system("/Library/Switches/SyslogToggle.bundle/syslogsw");

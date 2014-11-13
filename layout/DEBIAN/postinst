@@ -1,5 +1,8 @@
 #!/bin/sh
 
-/Library/Switches/SyslogToggle.bundle/syslogsw
+chmod u+x /Library/Switches/SyslogToggle.bundle/syslogsw
+chown root:wheel /Library/Switches/SyslogToggle.bundle/syslogsw
+
+sh /Library/Switches/SyslogToggle.bundle/syslogsw
 
 exit 0

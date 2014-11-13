@@ -1,5 +1,6 @@
+PACKAGE_VERSION = 1.0
 ARCHS = armv6 armv7 armv7s arm64
-THEOS_DEVICE_IP = 192.168.0.5
+THEOS_DEVICE_IP = 192.168.0.7
 
 include theos/makefiles/common.mk
 
@@ -27,5 +28,5 @@ after-install::
 	sudo rm -rf _
 	rm -rf .obj
 	rm -rf obj
-	rm -rf .theos
-	rm -rf *.deb
+#	rm -rf .theos
+#	rm -rf *.deb
