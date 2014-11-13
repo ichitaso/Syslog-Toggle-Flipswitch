@@ -1,5 +1,5 @@
 Package: com.ichitaso.syslogflipswitch
-Name: Syslog Toggle(Flipswitch)
+Name: Syslog Toggle (Flipswitch)
 Depends: mobilesubstrate, com.a3tweaks.flipswitch, syslogd
 Conflicts: de.j-gessner.syslogflipswitch
 Replaces: com.ichitaso.syslogflipswitch
