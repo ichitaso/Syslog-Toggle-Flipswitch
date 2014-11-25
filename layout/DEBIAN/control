@@ -1,5 +1,10 @@
 Package: com.ichitaso.syslogflipswitch
+<<<<<<< HEAD
 Depends: firmware (>= 4.0), mobilesubstrate, com.a3tweaks.flipswitch, syslogd
+=======
+Name: Syslog Toggle (Flipswitch)
+Depends: mobilesubstrate, com.a3tweaks.flipswitch, syslogd
+>>>>>>> FETCH_HEAD
 Conflicts: de.j-gessner.syslogflipswitch
 Replaces: com.ichitaso.syslogflipswitch
 Name: Syslog Toggle (Flipswitch)
