@@ -5,6 +5,12 @@ static NSString *clearCache = @"/var/mobile/Library/Caches/syslogclear";
 static NSString *logPath = @"/var/log/syslog";
 static NSString *filePath = @"/etc/syslog.conf";
 static BOOL syslogEnabled;
+static BOOL iOS8() {
+    if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Library/LaunchDaemons/com.apple.syslogd.plist"]) {
+        return YES;
+    }
+    return NO;
+}
 
 int main(int argc, char **argv, char **envp) {
     @autoreleasepool {
@@ -38,7 +44,7 @@ int main(int argc, char **argv, char **envp) {
             
             [str1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             
-            if (kCFCoreFoundationVersionNumber >= 1140.10) {
+            if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
                 [task1 setArguments:unload8];
                 [task1 launch];
                 
@@ -60,7 +66,7 @@ int main(int argc, char **argv, char **envp) {
             if (syslogEnabled) {
                 [str1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
                 
-                if (kCFCoreFoundationVersionNumber >= 1140.10) {
+                if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
                     [task1 setArguments:unload8];
                     [task1 launch];
                     
@@ -79,7 +85,7 @@ int main(int argc, char **argv, char **envp) {
             } else {
                 [str2 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
                 
-                if (kCFCoreFoundationVersionNumber >= 1140.10) {
+                if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
                     [task1 setArguments:unload8];
                     [task1 launch];
                     
