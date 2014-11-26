@@ -1,6 +1,6 @@
-PACKAGE_VERSION = 1.0-1
+PACKAGE_VERSION = 1.0-2
 ARCHS = armv6 armv7 armv7s arm64
-THEOS_DEVICE_IP = 192.168.0.7
+THEOS_DEVICE_IP = 192.168.0.4
 
 include theos/makefiles/common.mk
 
