@@ -4,11 +4,7 @@ Name: Syslog Toggle (Flipswitch)
 Depends: mobilesubstrate, com.a3tweaks.flipswitch, syslogd
 Conflicts: de.j-gessner.syslogflipswitch
 Replaces: com.ichitaso.syslogflipswitch
-<<<<<<< HEAD
 Version: 1.0-2
-=======
-Version: 1.0-1
->>>>>>> FETCH_HEAD
 Architecture: iphoneos-arm
 Description: Syslog toggle for Flipswitch.
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=flipswitchsyslogtoggleDp
