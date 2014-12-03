@@ -5,7 +5,7 @@ static NSString *clearCache = @"/var/mobile/Library/Caches/syslogclear";
 static NSString *logPath = @"/var/log/syslog";
 static NSString *filePath = @"/etc/syslog.conf";
 static BOOL syslogEnabled;
-static BOOL iOS8() {
+static BOOL Library() {
     if ([[NSFileManager defaultManager] fileExistsAtPath:@"/Library/LaunchDaemons/com.apple.syslogd.plist"]) {
         return YES;
     }
@@ -23,7 +23,7 @@ int main(int argc, char **argv, char **envp) {
         
         NSTask *task1 = [[NSTask alloc] init];
         [task1 setLaunchPath: @"/bin/launchctl"];
-        // iOS 8
+        // iOS 8 to 8.1.1
         NSArray *unload8 = [NSArray arrayWithObjects: @"unload", @"/Library/LaunchDaemons/com.apple.syslogd.plist", nil];
         
         NSTask *task2 = [[NSTask alloc] init];
@@ -44,7 +44,7 @@ int main(int argc, char **argv, char **envp) {
             
             [str1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
             
-            if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
+            if (Library()) {
                 [task1 setArguments:unload8];
                 [task1 launch];
                 
@@ -66,7 +66,7 @@ int main(int argc, char **argv, char **envp) {
             if (syslogEnabled) {
                 [str1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
                 
-                if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
+                if (Library()) {
                     [task1 setArguments:unload8];
                     [task1 launch];
                     
@@ -85,7 +85,7 @@ int main(int argc, char **argv, char **envp) {
             } else {
                 [str2 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
                 
-                if (iOS8() || kCFCoreFoundationVersionNumber >= 1140.10) {
+                if (Library()) {
                     [task1 setArguments:unload8];
                     [task1 launch];
                     

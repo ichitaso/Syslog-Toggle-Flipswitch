@@ -1,10 +1,9 @@
 Package: com.ichitaso.syslogflipswitch
-Depends: firmware (>= 4.0), mobilesubstrate, com.a3tweaks.flipswitch, syslogd
 Name: Syslog Toggle (Flipswitch)
-Depends: mobilesubstrate, com.a3tweaks.flipswitch, syslogd
+Depends: firmware (>= 4.0), mobilesubstrate, com.a3tweaks.flipswitch, syslogd
 Conflicts: de.j-gessner.syslogflipswitch
 Replaces: com.ichitaso.syslogflipswitch
-Version: 1.0-2
+Version: 1.0-4
 Architecture: iphoneos-arm
 Description: Syslog toggle for Flipswitch.
 Homepage: http://moreinfo.thebigboss.org/moreinfo/depiction.php?file=flipswitchsyslogtoggleDp
